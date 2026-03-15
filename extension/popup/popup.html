@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotionClip AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with logo -->
+    <header>
+      <div class="logo">
+        <img src="../icons/icon48.png" alt="NotionClip AI" width="28" height="28" style="border-radius: 6px;">
+      </div>
+      <div class="header-text">
+        <h1>NotionClip AI</h1>
+        <p class="subtitle">Smart bookmarking for Notion</p>
+      </div>
+    </header>
+
+    <!-- Status indicator -->
+    <div id="status-bar" class="status-bar">
+      <span id="status-dot" class="dot"></span>
+      <span id="status-text">Checking connection...</span>
+    </div>
+
+    <!-- Page preview card -->
+    <div id="page-preview" class="page-preview hidden">
+      <div class="preview-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3z" stroke="#1e3a5f" stroke-width="1.5" fill="none"/>
+          <path d="M5 6h6M5 8.5h4" stroke="#1e3a5f" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="preview-content">
+        <p class="preview-title" id="preview-title"></p>
+        <p class="preview-url" id="preview-url"></p>
+      </div>
+    </div>
+
+    <!-- AI features pills -->
+    <div class="features">
+      <span class="feature-pill">Summary</span>
+      <span class="feature-pill">Key Insights</span>
+      <span class="feature-pill">Tags</span>
+      <span class="feature-pill">Action Steps</span>
+    </div>
+
+    <!-- Main action button -->
+    <button id="save-btn" class="save-btn" disabled>
+      <svg id="btn-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2v14M2 9h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span id="btn-text">Save to Notion</span>
+      <span id="btn-loader" class="loader hidden"></span>
+    </button>
+
+    <!-- Result area -->
+    <div id="result" class="result hidden">
+      <div id="result-success" class="result-success hidden">
+        <div class="result-header">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <circle cx="11" cy="11" r="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+            <path d="M7 11l3 3 5-6" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="result-msg success-text">Saved to Notion!</p>
+        </div>
+        <div id="result-summary" class="result-summary"></div>
+        <div class="result-meta">
+          <span id="result-category" class="category-badge"></span>
+        </div>
+        <div id="result-tags" class="tags"></div>
+      </div>
+      <div id="result-error" class="result-error hidden">
+        <div class="result-header">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <circle cx="11" cy="11" r="10" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+            <path d="M8 8l6 6M14 8l-6 6" stroke="#c62828" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p id="error-msg" class="result-msg error-text">Something went wrong</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <a href="http://localhost:3001" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 5.5L7 2l5 3.5v6a1 1 0 01-1 1H3a1 1 0 01-1-1v-6z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M5 12V8h4v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Dashboard
+      </a>
+      <span class="sep"></span>
+      <a href="http://localhost:3001/history" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M7 4v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        My Clips
+      </a>
+    </footer>
+  </div>
+
+  <script src="../utils/api.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
